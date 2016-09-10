@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://easter.com/mobile/plugins/1.0"
+        id="easter-plugin-demo" version="1.0.0">
+    <name>Demo</name>
+    <description>Easter Plugin Demo</description>
+    <license>Easter</license>
+    <keywords>easter,demo</keywords>
+
+    <js-module src="www/Demo.js" name="Demo">
+	    <clobbers target="easter.demoPlugin" />
+	</js-module>
+
+	<platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Demo">
+                <param name="ios-package" value="ESDemo"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/ESDemo.h" />
+        <source-file src="src/ios/ESDemo.m" />
+    </platform>
+</plugin>
